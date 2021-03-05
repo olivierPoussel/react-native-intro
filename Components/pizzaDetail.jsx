@@ -14,7 +14,7 @@ export default function pizzaDetail({navigation, route}) {
             <Text style={styles.txt}>{pizza.nom}</Text>
             <Text style={styles.txt}>Prix : {pizza.prix}€</Text>
             <Text style={styles.txt}>Ingredients : </Text>
-            <View style={styles.pan}>
+            <View style={[styles.main, styles.pan]}>
                 {pizza.ingredients.map((ingredient, index) => {
                     return <Text key={index} style={styles.txt_md}>{ingredient}</Text>
                 } )}
@@ -29,5 +29,5 @@ const styles = StyleSheet.create({
     txt: {fontSize:30, marginTop: 20},
     txt_md: {fontSize:20, marginTop: 5},
     img: {width: 150, height:150, marginTop: 20},
-    pan: {borderWidth: 1,borderRadius: 30, borderColor: 'gray', padding: 10, marginTop:5},
+    pan: {borderWidth: 1,borderRadius: 30, borderColor: 'gray', padding: 10, marginTop: 5, marginBottom: 5, flex: 0},
 })
