@@ -3,21 +3,21 @@ import { StyleSheet } from 'react-native';
 import Home from './Components/home';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import PizzaDetail from './Components/PizzaDetail';
+import PizzaDetail from './Components/pizzaDetail';
 
 const Stack = createStackNavigator();
 
-export default function App () {
+export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen 
+        <Stack.Screen
           name="Home"
           component={Home}
           options={{
             title: 'Acceuil',
           }}
-          />
+        />
         <Stack.Screen name="PizzaDetail">
           {props => <PizzaDetail {...props} />}
         </Stack.Screen>
